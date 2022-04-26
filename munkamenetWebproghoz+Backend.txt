@@ -48,6 +48,31 @@ php artisan make:controller {KONTROLLERNEVE}Controller -m
 php artisan make:model {MODELLNEVE} -m
 
 --database modellek/ adattáblák feltöltése minta szerint oszlopokkal
+	//fő kulcs
+        $table->increments('jogosultsag_id');	
+
+	$table->string('nev');
+        $table->timestamps();
+
+	->
+
+	//fő kulcs
+	$table->increments('szemely_id'); 	
+
+	//kűlső kulcs	
+	$table->integer('jogosultsag_id')->unsigned(); 		
+	$table->foreign('jogosultsag_id')->references('jogosultsag_id')->on('jogosultasgs');
+	$table->string('email_cim');
+
+	$table->string('jelszo');
+	$table->string('nev');
+	$table->date('szul_datum');
+	$table->string('neme');
+	$table->string('igazolvany_szam');
+	$table->string('igazolvany_tipusa');
+	$table->integer('tel_szam');
+	$table->string('kep');
+        $table->timestamps();
 
 --app modellek feltöltése jó adattagokkal:
  	-protected $filler = ['berlet_tipus_id', 'ugyfel', 'datum_tol', 'datum_ig'];
