@@ -33,7 +33,7 @@
                 <label for="bekertCim">Cim:</label>
                 <input type="text" name="bekertCim" id="bekertCim" placeholder="A név amit meg akarzs változtatni..."><br>                
             </form>
-            <input type="button" value="Új adat felvétele:" class="ujAdatFelv">
+            <input type="submit" value="Új adat felvétele:" class="ujAdatFelv">
         </aside>
         
         <footer>
