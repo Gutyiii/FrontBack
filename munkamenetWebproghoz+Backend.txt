@@ -1,7 +1,7 @@
 cd desktop
 composer create-project --prefer-dist laravel/laravel {PROJEKT NEVE}
 composer require laravel/breeze --dev
- 
+php artisan breeze:install
 npm install
 npm run dev
 
